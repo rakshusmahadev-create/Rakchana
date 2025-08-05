@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int userNumber = scanner.nextInt();
+
+        for (int i = 1; i <= userNumber; i++) {
+            System.out.println("Outer loop " + i);
+
+            for (int j = 1; j <= 3; j++) {
+                System.out.println("  Middle loop " + j);
+
+                for (int k = 1; k <= 2; k++) {
+                    System.out.println("    Inner loop: " + (i * j * k));
+                }
+            }
+        }
+
+        
+    }
+}
