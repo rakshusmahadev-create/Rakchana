@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        String studentName="GK.Rakchana";
+        System.out.println("studentname:" +studentName);
+        char gender = 'F'; 
+        System.out.println("Gender: " + gender);
+        short sprNumber=9375;
+        System.out.println("sprnumber:" +sprNumber);
+        boolean isHosteller=false;
+        System.out.println("ishosteller:" +isHosteller);
+        long contactNumber=9150247944L;
+        System.out.println("contactnumber:" +contactNumber);
+        byte age=20;
+        System.out.println("Age:" +age);
+        double height=158.2;
+        System.out.println("Height:" +height);
+        float cgpa=8.44f;
+        System.out.println("CGPA:" +cgpa);
+        
+    }
+}
