@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class SimpleArea {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char ch;
+        double area;
+
+        System.out.println("Choose shape:");
+        System.out.println("C - Circle");
+        System.out.println("R - Rectangle");
+        System.out.println("S - Square");
+        System.out.println("T - Triangle");
+        System.out.print("Enter your choice: ");
+        ch = sc.next().charAt(0); 
+
+        switch (ch) {
+            case 'C':
+                System.out.print("Enter radius: ");
+                double r = sc.nextDouble();
+                area = 3.14 * r * r;
+                System.out.println("Area of Circle = " + area);
+                break;
+
+            case 'R':
+                System.out.print("Enter length: ");
+                double l = sc.nextDouble();
+                System.out.print("Enter breadth: ");
+                double b = sc.nextDouble();
+                area = l * b;
+                System.out.println("Area of Rectangle = " + area);
+                break;
+
+            case 'S':
+                System.out.print("Enter side: ");
+                double s = sc.nextDouble();
+                area = s * s;
+                System.out.println("Area of Square = " + area);
+                break;
+
+            case 'T':
+                System.out.print("Enter base: ");
+                double base = sc.nextDouble();
+                System.out.print("Enter height: ");
+                double h = sc.nextDouble();
+                area = 0.5 * base * h;
+                System.out.println("Area of Triangle = " + area);
+                break;
+
+            default:
+                System.out.println("Invalid shape");
+        }
+
+        
+    }
+}
