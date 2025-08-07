@@ -23,3 +23,23 @@ ENTER A NUMBER 1 TO 10:5
 2 + 3 = 5
 3 + 2 = 5
 4 + 1 = 5
+
+//Program 2:
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = data.nextInt();
+
+        int square = num * num;
+        System.out.println(num + "^2 = " + square);
+
+        
+    }
+}
+Output:
+Enter a number: 7
+7^2 = 49
