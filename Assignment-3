@@ -1,0 +1,88 @@
+import java.util.Scanner;
+public class TheaterBooking {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+        int[] seatNumbers = new int[100];
+        String[] personNames = new String[100];
+        int bookingCount = 0;
+        while (true) {
+            System.out.println("\n--- Theater Booking Menu ---");
+            System.out.println("1. Add Bookings");
+            System.out.println("2. Delete (Replace) Name");
+            System.out.println("3. Update Booking");
+            System.out.println("4. Display Bookings");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice: ");
+            int choice = data.nextInt();
+            data.nextLine();
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter number of new bookings to add: ");
+                    int newBookings = data.nextInt();
+                    data.nextLine(); 
+                    for (int i = 0; i < newBookings; i++) {
+                        System.out.print("Enter seat number for booking " + (bookingCount + 1) + ": ");
+                        seatNumbers[bookingCount] = data.nextInt();
+                        data.nextLine();  // Consume newline
+                        System.out.print("Enter person name for seat " + seatNumbers[bookingCount] + ": ");
+                        personNames[bookingCount] = data.nextLine();
+                        bookingCount++;
+                    }
+                    break;
+                case 2:
+                    System.out.print("Enter the name to replace: ");
+                    String deleteName = data.nextLine();
+                    boolean replaced = false;
+                    for (int i = 0; i < bookingCount; i++) {
+                        if (personNames[i] != null && personNames[i].equalsIgnoreCase(deleteName)) {
+                            System.out.print("Enter the new name to replace " + deleteName + ": ");
+                            String newName = data.nextLine();
+                            personNames[i] = newName;
+                            System.out.println(deleteName + " replaced with " + newName + " successfully.");
+                            replaced = true;
+                            break;
+                        }
+                    }
+                    if (!replaced) {
+                        System.out.println("Name not found!");
+                    }
+                    break;
+                case 3:
+                    System.out.print("Enter the current name to update: ");
+                    String currentName = data.nextLine();
+                    boolean updated = false;
+                    for (int i = 0; i < bookingCount; i++) {
+                        if (personNames[i] != null && personNames[i].equalsIgnoreCase(currentName)) {
+                            System.out.print("Enter new seat number: ");
+                            seatNumbers[i] = data.nextInt();
+                            data.nextLine(); // Consume newline
+                            System.out.print("Enter new name: ");
+                            personNames[i] = data.nextLine();
+                            System.out.println("Booking updated successfully.");
+                            updated = true;
+                            break;
+                        }
+                    }
+                    if (!updated) {
+                        System.out.println("Name not found for update.");
+                    }
+                    break;
+                case 4:
+                    System.out.println("\nCurrent Bookings:");
+                    for (int i = 0; i < bookingCount; i++) {
+                        if (personNames[i] != null) {
+                            System.out.println("Seat No: " + seatNumbers[i] + " - " + personNames[i]);
+                        }
+                    }
+                    break;
+                case 5:
+                    System.out.println("Exiting program. Goodbye!");
+                    data.close();
+                    return;
+
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+}
