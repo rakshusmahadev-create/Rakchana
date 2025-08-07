@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+        System.out.print("Enter the starting number: ");
+        int startingNumber = data.nextInt();  
+        System.out.print("Enter the ending number: ");
+        int endingNumber = data.nextInt();    
+        int randomNumber = startingNumber + (int)(Math.random() * (endingNumber - startingNumber + 1));
+        System.out.println("Random number between " + startingNumber + " and " + endingNumber + ": " + randomNumber);
+    }
+}
