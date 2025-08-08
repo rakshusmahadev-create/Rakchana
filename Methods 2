@@ -1,0 +1,17 @@
+PROGRAM:
+class sample {
+    public void add() {
+       int  x = 100;
+       int y = 150;
+        System.out.println(x + y);
+        }
+}
+        class Main {
+           public static void main(String[] args) {
+               sample obj = new sample();
+               obj.add();
+           }
+        }
+OUTPUT:
+250
+       
