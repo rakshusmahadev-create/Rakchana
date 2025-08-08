@@ -29,17 +29,35 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        Scanner data = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter a number: ");
-        int num = data.nextInt();
+       
+        System.out.print("Enter the start of the range: ");
+        int start = input.nextInt();
 
-        int square = num * num;
-        System.out.println(num + "^2 = " + square);
+        System.out.print("Enter the end of the range: ");
+        int end = input.nextInt();
+
+        System.out.println("Auto-phobi numbers from " + start + " to " + end + ":");
 
         
+        for (int i = start; i <= end; i++) {
+            int square = i * i;
+
+            String numStr = String.valueOf(i);
+            String squareStr = String.valueOf(square);
+
+                       if (squareStr.endsWith(numStr)) {
+                System.out.println("\t" + i + "^2 = " + square);
+            }
+        }
     }
 }
 Output:
-Enter a number: 7
-7^2 = 49
+Enter the start of the range: 10
+Enter the end of the range: 2000
+Auto-phobi numbers from 10 to 2000:
+	25^2 = 625
+	76^2 = 5776
+	376^2 = 141376
+	625^2 = 390625
