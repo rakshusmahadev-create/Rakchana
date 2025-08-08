@@ -26,3 +26,68 @@ class Main {
 OUTPUT:
 
 RakchanaKarthikeyan
+
+
+//Program3:
+import java.util.Scanner;
+
+class Main {
+   public static void add(int a, int b) {
+        System.out.println("Addition: " + (a + b));
+    }
+
+     public static void subtract(int a, int b) {
+        System.out.println("Subtraction: " + (a - b));
+    }
+
+     public static void divide(int a, int b) {
+        if (b != 0) {
+            System.out.println("Division: " + ((float) a / b));
+        } else {
+            System.out.println("Cannot divide by zero!");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int num1 = data.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = data.nextInt();
+
+        System.out.println("Choose operation:");
+        System.out.println("Addition");
+        System.out.println("Subtraction");
+        System.out.println("Division");
+        System.out.print("Enter your choice (1-3): ");
+        int choice = data.nextInt();
+
+        
+        switch (choice) {
+            case 1:
+                add(num1, num2);
+                break;
+            case 2:
+                subtract(num1, num2);
+                break;
+            case 3:
+                divide(num1, num2);
+                break;
+            default:
+                System.out.println("Invalid choice!");
+        }
+
+       
+    }
+}
+
+OUTPUT:
+Enter first number: 6
+Enter second number: 0
+Choose operation:
+Addition
+Subtraction
+Division
+Enter your choice (1-3): 2
+Subtraction: 6
