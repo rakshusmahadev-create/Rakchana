@@ -91,3 +91,21 @@ Subtraction
 Division
 Enter your choice (1-3): 2
 Subtraction: 6
+
+//Instant Methods
+Program:
+class Main {
+    public static void main(String[] args) {
+         System.out.println("Instant Method");
+         Main obj= new Main();
+         obj.sample();
+        
+    }
+    public void sample() {
+        int a = 10;
+        System.out.println(a);
+    }
+}
+OUTPUT:
+Instant Method
+10
