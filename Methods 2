@@ -15,3 +15,42 @@ class sample {
 OUTPUT:
 250
        
+PROGRAM:
+class Add {
+    public void operate(int x, int y) {
+        System.out.println("Addition: " + (x + y));
+    }
+}
+class Subtract {
+    public void operate(int x, int y) {
+        System.out.println("Subtraction: " + (x - y));
+    }
+}
+class Divide {
+    public void operate(int x, int y) {
+        if (y != 0) {
+            System.out.println("Division: " + (x / y));
+        } else {
+            System.out.println("Cannot divide by zero!");
+        }
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        int a = 100, b = 20;
+
+        Add addObj = new Add();
+        addObj.operate(a, b);
+
+        Subtract subObj = new Subtract();
+        subObj.operate(a, b);
+
+        Divide divObj = new Divide();
+        divObj.operate(a, b);
+    }
+}
+
+OUTPUT:
+Addition: 120
+Subtraction: 80
+Division: 5
