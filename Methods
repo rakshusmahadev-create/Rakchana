@@ -1,0 +1,15 @@
+//Program 1:
+import java.util.Scanner;
+
+class Main {
+    public static void myMethod() {
+    System.out.println("Rakchana ");
+    }
+    public static void main(String[] args) {
+        myMethod();
+        
+  }
+}
+
+OUTPUT:
+Rakchana 
