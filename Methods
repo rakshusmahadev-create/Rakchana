@@ -13,3 +13,16 @@ class Main {
 
 OUTPUT:
 Rakchana 
+
+//prpgram 2:
+class Main {
+    public static void  myName(String firstName, String lastName) {
+        System.out.println(firstName + lastName);
+    }
+    public static void main(String[] args){
+        myName("Rakchana" , "Karthikeyan");
+    }
+}
+OUTPUT:
+
+RakchanaKarthikeyan
