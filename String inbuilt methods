@@ -134,3 +134,55 @@ class Main {
 OUTPUT:
 false
 Hi Rakshu yourage is 19
+
+
+Program 9:
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        char[] data = {'9','3','7','5','Q','W','E','U','G','Y','X'}; 
+        
+
+        String mystring = "RAKCHANAKARTHIKEYAN";
+        mystring.getChars(0, 8, data, 3); 
+
+        System.out.println(data); 
+    }
+}
+
+
+OUTPUT:
+937RAKCHANA
+
+
+Program 10:
+class Main {
+    public static void main(String[] args) {
+        String name = "Rakshu";
+        byte[] arr = name.getBytes();  
+        System.out.println(arr[0]);    
+    }
+}
+
+OUTPUT:
+82
+
+
+Program 11:
+class Main {
+    public static void main(String[] args) {
+        String name = "Hello World";
+        byte[] arr = name.getBytes();  
+        System.out.println(name.hashCode());    
+        System.out.println(name.toUpperCase());
+        System.out.println(name.indexOf("World"));
+    }
+}
+
+OUTPUT:
+-862545276
+HELLO WORLD
+6
+
