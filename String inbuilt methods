@@ -1,0 +1,93 @@
+Program 1:
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        String data = "Rakchana_Karthikeyan";
+        char mystr = data.charAt(0);
+        Scanner x = new Scanner(System.in);
+        System.out.print("Enter a character:");
+        char y = x.next().charAt(0);
+        System.out.println(" " + mystr);
+        System.out.println( " " + y);
+    }
+}
+
+OUTPUT:
+Enter a character:k
+ R
+ k
+
+PROGRAM 2:
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        String data = "Rakchana_Karthikeyan";
+        int mystr = data.codePointCount(0, data.length()); 
+        Scanner x = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        int y = x.next().codePointCount(0,1); 
+        System.out.println(" " + mystr);
+        System.out.println(" " + y);
+    }
+}
+
+OUTPUT:
+Enter a character: c
+ 20
+ 1
+
+
+Program 3:
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        String data = "Rakchana_Karthikeyan";
+        int mystr = data.codePointBefore(1);
+        Scanner x = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        String input = x.next(); 
+        int y = input.codePointBefore(1); 
+        System.out.println("Code point of first character in string: " + mystr);
+        System.out.println("Code point of your input: " + y);
+    }
+}
+
+OUTPUT:
+Enter a character: a
+Code point of first character in string: 82
+Code point of your input: 97
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Program 5:
+class Main {
+    public static void main(String[] args) {
+        String data = "Rakshu";
+        String data2 = "Mahadev";
+        int result = data.compareToIgnoreCase(data2);
+        String result2 = data.concat(data2);
+        System.out.println("Compare:" + result);
+        System.out.println("Combine:" + result2);
+    }
+}
+
+OUTPUT:
+Compare:5
+Combine:RakshuMahadev
