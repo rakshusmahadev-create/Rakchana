@@ -186,3 +186,25 @@ OUTPUT:
 HELLO WORLD
 6
 
+
+Program 12:
+class Main {
+    public static void main(String[] args) {
+        String x = "            Rakshu Mahadev   ";
+        String y = "Hi Krishna";
+        System.out.println( x);
+        System.out.println(x.trim());
+        System.out.println(String.valueOf(y));
+        System.out.println(String.valueOf(true));
+        
+    }
+}
+o/p:
+
+            Rakshu Mahadev   
+Rakshu Mahadev
+Hi Krishna
+true
+
+
+
