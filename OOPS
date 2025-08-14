@@ -17,3 +17,100 @@ class Person {
         System.out.println(p.toString());
         }
 }
+
+
+import java.util.Scanner;
+
+// parent class
+class Good {
+    void family() {
+        System.out.println("Family details");
+    }
+}
+
+// child classes
+class Gopalakrishnan extends Good {
+    void family() {
+        System.out.println("Gopalakrishnan");
+    }
+}
+
+class Vijaya extends Good {
+    void family() {
+        System.out.println("Vijaya");
+    }
+}
+
+class Karthikeyan extends Good {
+    void family() {
+        System.out.println("Karthikeyan");
+    }
+}
+
+class Usha extends Good {
+    void family() {
+        System.out.println("Usha");
+    }
+}
+
+// main class
+public class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+        Good person;
+
+        System.out.println("Enter a name :");
+        String input = data.nextLine().trim().toLowerCase();
+
+        if (input.equals("Gopalakrishnan")) {
+            person = new Gopalakrishnan();
+        } else if (input.equals("Vijaya")) {
+            person = new Vijaya();
+        } else if (input.equals("Karthikeyan")) {
+            person = new Karthikeyan();
+        } else if (input.equals("Usha")) {
+            person = new Usha();
+        } else {
+            System.out.println("Invalid input ");
+            person = new Good();
+        }
+
+        person.family();
+       
+}
+}
+o/p:
+Enter a name :
+Karthikeyan
+Invalid input 
+Family details
+
+
+//Single inheritance
+// Parent class
+class MomAndDad {
+    void family() {
+        System.out.println("Single Inheritance");
+    }
+}
+
+// Child class
+class Amsavarthini extends MomAndDad {
+    void family() {
+        System.out.println("Rakchana");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        MomAndDad a;
+        a = new Amsavarthini();  
+        a.family();               
+    }
+}
+
+o/p:
+Rakchana
+
+o
