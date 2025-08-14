@@ -113,4 +113,134 @@ public class Main {
 o/p:
 Rakchana
 
-o
+//multilevel inheritance
+//base class1
+class vehicle {
+    void vehicle() {
+        System.out.println("This is a vehicle");
+        
+    }
+}
+//Base class 2
+class FourWheeler extends vehicle {
+    FourWheeler(){
+        System.out.println("This is a FourWheeler");
+    }
+}
+//derived class
+class Car extends FourWheeler {
+    Car() {
+        System.out.println("This is a car");
+    }
+}
+//main class
+public class Main {
+    public static void main(String[] args) {
+        Car obj = new Car();
+    }
+}
+
+o/p:
+This is a FourWheeler
+This is a car
+
+// Grandparent class
+class GrandParent {
+    void showFamily() {
+        System.out.println("Family :");
+    }
+}
+
+// Parent class inherits from GrandParent
+class Parent extends GrandParent {
+    void cousinOne() {
+        System.out.println("Cousin: Sachin");
+    }
+}
+
+// Child class inherits from Parent
+class Child extends Parent {
+    void cousinTwo() {
+        System.out.println("Cousin: Harshini");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Child obj = new Child();
+
+        obj.showFamily();   
+        obj.cousinOne();    
+        obj.cousinTwo();    
+    }
+}
+
+o/p:
+Family :
+Cousin: Sachin
+Cousin: Harshini
+
+//Hierarchical class
+//Base class 
+class Mother {
+     Mother() {
+        System.out.println("This is the Mother");
+        
+    }
+}
+//derived class 1
+class Daughter1 extends Mother {
+    Daughter1(){
+        System.out.println("This is a Daughter1 Amsavarthini");
+    }
+}
+//derived class 2
+class Daughter2 extends Mother {
+    Daughter2() {
+        System.out.println("This is a Daughter2 Rakchana");
+    }
+}
+//main class
+public class Main {
+    public static void main(String[] args) {
+Daughter1 obj1 = new Daughter1();
+Daughter2 obj2 = new Daughter2();
+    }
+}
+
+o/p:
+This is the Mother
+This is a Daughter1 Amsavarthini
+This is the Mother
+This is a Daughter2 Rakchana
+
+//Multilevel inheritance
+//base class
+interface Audi {
+    default void modelOfAudi() {
+        System.out.println("This is a modelOfAudi");
+    }
+}//base class
+interface BMW {
+    default void modelOfbmw() {
+        System.out.println("This is a modelOfbmw");
+    }
+}
+class Car implements Audi,BMW {
+    Car() {
+        System.out.println("This is a cars");
+    }
+}
+//Main class
+public class Main {
+    public static void main(String[] args) {
+        Car obj = new Car();
+        obj.modelOfAudi();
+        obj.modelOfbmw();
+    }
+}
+o/p:
+This is a cars
+This is a modelOfAudi
+This is a modelOfbmw
