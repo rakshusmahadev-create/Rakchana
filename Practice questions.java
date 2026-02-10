@@ -123,3 +123,138 @@ input:A
 o/p:
 a
 
+program 6:
+import java.util.*;
+public class Main
+{
+     public static void main (String[] args) {
+    
+        Scanner scan = new Scanner(System.in);
+        int year = scan.nextInt();
+        if(year%4==0 && year%100!=0||year%400==0){
+          System.out.println("Leap Year");
+        }
+        else{
+          System.out.println("not a leap year");
+        }
+    }
+}
+i/p:2032
+o/p:Leap Year
+
+program7:(Print the factors of a number):
+     import java.util.*;
+public class Main
+{
+     public static void main (String[] args) {
+    
+        Scanner scan = new Scanner(System.in);
+        int factor = scan.nextInt();
+        for(int i=1;i<=factor;i++){
+        if(factor % i == 0){
+          System.out.println(i);
+        }
+      
+       }
+        
+    }
+}
+input:500
+o/p:
+     1
+2
+4
+5
+10
+20
+25
+50
+100
+125
+250
+500
+Program8:(Factors count)
+import java.util.*;
+public class Main
+{
+     public static void main (String[] args) {
+    
+        Scanner scan = new Scanner(System.in);
+        int num = scan.nextInt();
+        int count=0;
+        for(int i=2; i<=num/2;i++){
+          if(num%i==0){
+            count++;
+          }
+        }
+        System.out.println(count+2);
+    }
+}
+input:500
+o/p:
+12
+program9(prime or not prime)
+     import java.util.*;
+public class Main
+{
+     public static void main (String[] args) {
+    
+        Scanner scan = new Scanner(System.in);
+        int num = scan.nextInt();
+        int count=0;
+        for(int i=2; i<=num;i++){
+          if(num%i==0){
+            count++;
+          }
+        }
+        if(count==2){
+          System.out.println("prime");
+        }
+        else{
+          System.out.println("not prime");
+        }
+    }
+}
+i/p:21
+o/p:not prime
+
+Program10:(factorial)
+     import java.util.*;
+public class Main
+{
+     public static void main (String[] args) {
+    
+        Scanner scan = new Scanner(System.in);
+        int num = scan.nextInt();
+        int mul=1;
+        for(int i=1; i <=num; i++){
+          mul = mul*i;
+        }
+        System.out.println(mul);
+        
+    }
+}
+input:8
+output:40320
+
+Program11:(fibonacci)
+     import java.util.Scanner;
+
+public class  Main{
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of terms: ");
+        int n = sc.nextInt();
+           int a = 0, b = 1, c;
+        for(int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+}
+input:8
+output: 0 1 1 2 3 5 8 13 
