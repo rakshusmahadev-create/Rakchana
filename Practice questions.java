@@ -99,3 +99,27 @@ input:677
 output:
 Not Palindrome
 776
+
+program 5:
+import java.util.*;
+public class Main
+{
+     public static void main (String[] args) {
+    
+        Scanner scan = new Scanner(System.in);
+        char ch = scan.next().charAt(0);
+        if(ch>= 'A' && ch<='Z'){
+          System.out.println((char)(ch+32));
+        }
+        else if(ch>= 'a' && ch<='z'){
+          System.out.println((char)(ch-32));
+        }
+        else{
+          System.out.println(ch);
+        }
+    }
+}
+input:A
+o/p:
+a
+
