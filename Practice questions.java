@@ -238,23 +238,47 @@ input:8
 output:40320
 
 Program11:(fibonacci)
-     import java.util.Scanner;
+     import java.util.*;
 
-public class  Main{
+public class Main {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter number of terms: ");
-        int n = sc.nextInt();
-           int a = 0, b = 1, c;
-        for(int i = 1; i <= n; i++) {
-            System.out.print(a + " ");
-            c = a + b;
-            a = b;
-            b = c;
+        int a = sc.nextInt(); 
+        int s = 0, b = 1;
+
+        System.out.println("Fibonacci sequence:");
+
+        for (int i = 1; i <= a; i++) {
+            System.out.print(s + " ");
+            int next = s + b;
+            s = b;
+            b = next;
         }
     }
 }
 input:8
-output: 0 1 1 2 3 5 8 13 
+output: 0 1 1 2 3 5 8 13
+
+Program12(without power):
+     import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int base = sc.nextInt();
+        int power = sc.nextInt();
+        int m = 1;
+
+        for(int i = 1; i <= power; i++) {
+            m = m*base;
+        }
+
+        System.out.println(m);
+    }
+}
+Inuput:
+2
+5
+o/p:
+32
