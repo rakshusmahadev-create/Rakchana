@@ -20,3 +20,24 @@ public class Main{
     m2.print();
   }
 }
+// parameterised constructor
+class Student{
+  int reg;
+  String name;
+  void assign(int r,String n) {
+    reg = r;
+    name = n;
+  }
+  void print(){
+    System.out.println(reg + " "+name);
+  }
+}
+public class Main{
+  public static void main(String[] args){
+    Student m1 = new Student(101,"arun");
+    Student m2 = new Student(102,"mythili");
+   
+    m1.print();
+    m2.print();
+  }
+}
