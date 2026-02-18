@@ -119,3 +119,22 @@ public class Main {
 }
 //Program 4:
 https://www.onlinegdb.com/9gnIMNA0I
+//Program 5:
+https://www.onlinegdb.com/vZGIerlOL
+//Program 6:
+delete
+  void deleteatleast(){
+  if(head==null){
+  System.out.println("No element to delete");
+  return;
+}
+Node temp=head;
+while(temp.next !=tail){
+  temp=temp.next;
+}
+tail-temp;
+tail.next=null;
+}
+https://www.onlinegdb.com/kASk-Htlm
+https://www.onlinegdb.com/Ntju9Nt5p
+https://www.onlinegdb.com/2B1ajjxjtQ
