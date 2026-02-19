@@ -142,6 +142,7 @@ https://www.onlinegdb.com/oh2hFDTjH
 https://www.onlinegdb.com/GvZOLio3f
 https://www.onlinegdb.com/s21s_-wL3
 https://onecompiler.com/java/44e2wfkn8
+https://www.onlinegdb.com/QGD9FqeOP-doubly linked list(insertion)
 //Program:
 class Node {
 	int data;
