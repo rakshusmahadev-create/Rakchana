@@ -138,3 +138,95 @@ tail.next=null;
 https://www.onlinegdb.com/kASk-Htlm
 https://www.onlinegdb.com/Ntju9Nt5p
 https://www.onlinegdb.com/2B1ajjxjtQ
+https://www.onlinegdb.com/oh2hFDTjH
+https://www.onlinegdb.com/GvZOLio3f
+https://www.onlinegdb.com/s21s_-wL3
+https://onecompiler.com/java/44e2wfkn8
+//Program:
+class Node {
+	int data;
+	Node prev;
+	Node next;
+	Node(int data) {
+		this.data = data;
+		prev=null;
+		next=null;
+	}
+}
+class Circularsinglylinkedlist{
+    Node head=null;
+    Node tail=null;
+    int size=0;
+    
+    void addatlast(int data){
+        Node newnode=new Node(data);
+        size++;
+        if(head==null){
+            head=tail=newnode;
+            tail.next=head;
+        }
+        else{
+            tail.next=newnode;
+            tail=newnode;
+            tail.next=head;
+        }
+    }
+    
+    void addatbeg(int data){
+        Node newnode=new Node(data);
+        size++;
+        if(head==null){
+            head=tail=newnode;
+            tail.next=head;
+        }
+        newnode.next=head;
+        head=newnode;
+        tail.next=head;
+        
+    }
+    
+    void display(){
+        if(head==null){
+            System.out.println("There is no element to print");
+            return;
+        }
+        Node temp=head;
+        do{
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+            }while(temp!=head);
+            System.out.println();
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	Circularsinglylinkedlist c=new Circularsinglylinkedlist();
+	c.addatlast(10);
+	c.addatlast(20);
+	c.addatlast(30);
+	c.addatbeg(40);
+	c.display();
+	}
+}
+
+//delete at last
+void deleteatlas(){
+  if(head==null){
+    System.out.println("no element to delete");
+    return;
+  }
+  if(head==tail){
+    head=tail=null;
+    System.out.println("All elements are deleted");
+    return;
+  }
+  Node temp = head;
+  while(temp.next!=tail){
+    temp=temp.next;
+  }
+  tail=temp;
+  tail.next=head;
+  size--;
+}
+      
