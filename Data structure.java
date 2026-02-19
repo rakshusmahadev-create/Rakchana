@@ -237,4 +237,8 @@ void deleteatlas(){
 		  )
 		  if(head==tail){
 			  head=tail=null;
-			  
+
+//Stack link
+			  https://onecompiler.com/java/44e2wfkn8
+//Stack and queue 
+			  https://www.onlinegdb.com/1APbTQIE9K
