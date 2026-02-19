@@ -242,3 +242,5 @@ void deleteatlas(){
 			  https://onecompiler.com/java/44e2wfkn8
 //Stack and queue 
 			  https://www.onlinegdb.com/1APbTQIE9K
+//Queue using linked list
+			  https://www.onlinegdb.com/YLcfy25F4
