@@ -229,4 +229,11 @@ void deleteatlas(){
   tail.next=head;
   size--;
 }
-      
+  void deleteatBeg(){
+	  if(head==null){
+		  System.out.println("no element to delete");
+		  return;
+		  )
+		  if(head==tail){
+			  head=tail=null;
+			  
